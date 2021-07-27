@@ -7,28 +7,13 @@
  */
 import 'react-native-gesture-handler';
 import React, {useState} from 'react';
-import {Button} from 'react-native';
-import {Node} from 'react';
-import Shaker from './Shaker';
-import {BleManager} from 'react-native-ble-plx';
 import HomeScreen from './Screens/HomeScreen';
 import BluetoothScreen from './Screens/BluetoothScreen';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import styles from './Styles';
-
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
+import {useColorScheme} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
