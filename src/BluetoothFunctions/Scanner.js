@@ -1,5 +1,4 @@
 import {BleManager} from 'react-native-ble-plx';
-// import manager from '../Manager';
 
 const manager = new BleManager();
 
@@ -13,8 +12,20 @@ export const scan = function scan() {
           if (error) {
             console.log(error);
           }
-          if (device != null) {
+          if (
+            device.name === 'ESP32' ||
+            device.name === 'Shaker' ||
+            device.name === 'Trevor’s MacBook Pro'
+          ) {
             console.log(device.id, device.name);
+            manager.stopDeviceScan();
+            device
+              .connect()
+              .then(device => {
+                return device.discoverAllServicesAndCharacteristics();
+              })
+              .then(() => console.log('Connected'))
+              .catch(error => console.log('Failed to connect'));
           }
         },
       );
@@ -23,14 +34,4 @@ export const scan = function scan() {
       console.log('PoweredOff');
     }
   }, true);
-  //   manager.startDeviceScan(null, {allowDuplicates: false}, (error, device) => {
-  //     if (error) {
-  //       console.log(error);
-  //       return;
-  //     }
-  //     if (device != null) {
-  //       console.log(device.id);
-  //     }
-  //   });
-  console.log('scanned');
 };
