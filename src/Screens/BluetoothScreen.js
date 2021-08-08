@@ -1,11 +1,23 @@
-import React from 'react';
-import {SafeAreaView, StatusBar, ScrollView, View, Button} from 'react-native';
+import React, {useContext} from 'react';
+import AppContext from '../Store';
+import {
+  SafeAreaView,
+  StatusBar,
+  ScrollView,
+  View,
+  Button,
+  Text,
+} from 'react-native';
 import {styles, isDarkMode} from '../Styles';
 import Section from '../Section';
 
-import {scan} from '../BluetoothFunctions/Scanner';
+import {scan, disconnect} from '../BluetoothFunctions/Scanner';
 
 const BluetoothScreen = ({navigation}) => {
+  const myContext = useContext(AppContext);
+  if (myContext.CONNECTED) {
+    navigation.navigate('Home');
+  }
   return (
     <SafeAreaView style={[styles.backgroundStyle]}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
@@ -13,8 +25,14 @@ const BluetoothScreen = ({navigation}) => {
         contentInsetAdjustmentBehavior="automatic"
         style={[styles.backgroundStyle]}>
         <View style={[styles.backgroundStyle]}>
-          <Section title="Bluetooth">Devices</Section>
-          <Button title="Scan" onPress={() => scan()} />
+          <Section title="Bluetooth">
+            <Button
+              title={myContext.CONNECTED ? 'Disconnect' : 'Scan'}
+              onPress={() =>
+                myContext.CONNECTED ? disconnect(myContext) : scan(myContext)
+              }
+            />
+          </Section>
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -2,7 +2,7 @@ import {BleManager} from 'react-native-ble-plx';
 
 const manager = new BleManager();
 
-export const scan = function scan() {
+export const scan = context => {
   const subscription = manager.onStateChange(state => {
     switch (state) {
       case 'PoweredOn':
@@ -16,22 +16,30 @@ export const scan = function scan() {
             if (
               device.name === 'ESP32' ||
               device.name === 'Shaker' ||
-              device.name === 'LE-Little Miss Dynamite'
+              device.name === 'Trevor’s MacBook Pro'
             ) {
               console.log(device.id, device.name);
               manager.stopDeviceScan();
+              console.log('Connected');
               device
                 .connect()
                 .then(() => {
                   return device.discoverAllServicesAndCharacteristics();
                 })
-                .then(() => console.log('Connected'))
+                .then(() => context.setConnected(true))
                 .then(() => {
                   deviceServices = device.services();
                   return deviceServices;
                 })
                 .then(() => {
-                  console.log(deviceServices);
+                  deviceCharacteristics = device.characteristicsForService(
+                    deviceServices._W[0].uuid,
+                  );
+                  return deviceCharacteristics;
+                })
+                .then(() => {
+                  context.setSUUID(deviceCharacteristics._W[0].serviceUUID);
+                  context.setCUUID(deviceCharacteristics._W[0].uuid);
                 })
                 .catch(error => console.log(error));
             }
@@ -53,4 +61,18 @@ export const scan = function scan() {
         break;
     }
   }, true);
+};
+
+export const disconnect = context => {
+  deviceList = manager.connectedDevices([context.SERVICE_UUID]);
+  deviceList
+    .then(() => {
+      manager.cancelDeviceConnection(deviceList._W[0].id);
+      console.log('Disconnected');
+    })
+    .then(() => {
+      context.setConnected(false);
+      context.setSUUID('0');
+      context.setCUUID('0');
+    });
 };

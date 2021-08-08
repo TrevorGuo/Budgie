@@ -22,6 +22,7 @@ export const styles = StyleSheet.create({
   },
   backgroundStyle: {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    flex: 1,
   },
   textColor: {
     color: isDarkMode ? Colors.white : Colors.black,
