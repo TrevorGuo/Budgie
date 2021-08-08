@@ -36,7 +36,6 @@ export const scan = context => {
                   return deviceCharacteristics;
                 })
                 .then(() => {
-                  console.log(deviceCharacteristics);
                   context.setDeviceID(deviceCharacteristics._W[0].deviceID);
                   context.setSUUID(deviceCharacteristics._W[0].serviceUUID);
                   context.setCUUID(deviceCharacteristics._W[0].uuid);

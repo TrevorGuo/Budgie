@@ -6,6 +6,8 @@ export const listen = context => {
     context.SERVICE_UUID,
     context.CHARACTERISTIC_UUID,
   );
+  const start = Date.now();
+  console.log('Starting...');
   characteristic.then(() => {
     manager.monitorCharacteristicForDevice(
       context.DEVICE_ID,
@@ -15,7 +17,8 @@ export const listen = context => {
         if (error) {
           console.log(error);
         } else {
-          console.log(characteristic);
+          const millis = Date.now() - start;
+          console.log(millis);
         }
       },
     );
