@@ -11,6 +11,7 @@ import AppContext from '../Store';
 import {styles, isDarkMode} from '../Styles';
 import Section from '../Section';
 import Shaker from '../Shaker';
+import {listen} from '../BluetoothFunctions/Listener';
 
 const PlayScreen = ({navigation: {goBack}}) => {
   const myContext = useContext(AppContext);
@@ -23,7 +24,7 @@ const PlayScreen = ({navigation: {goBack}}) => {
         style={styles.backgroundStyle}>
         <View style={styles.backgroundStyle}>
           <Button title="Go Back" onPress={() => goBack()} />
-          <Button title="Start" />
+          <Button title="Start" onPress={() => listen(myContext)} />
           <Section title="UUIDs">
             <Shaker />
             <Text>

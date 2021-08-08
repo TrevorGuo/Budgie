@@ -1,7 +1,7 @@
 import {manager} from './Manager';
 
 export const listen = context => {
-  const characteristic = readCharacteristicForDevice(
+  const characteristic = manager.readCharacteristicForDevice(
     context.DEVICE_ID,
     context.SERVICE_UUID,
     context.CHARACTERISTIC_UUID,
@@ -14,8 +14,9 @@ export const listen = context => {
       (error, characteristic) => {
         if (error) {
           console.log(error);
+        } else {
+          console.log(characteristic);
         }
-        console.log(characteristic);
       },
     );
   });
