@@ -10,6 +10,7 @@ import React, {useContext} from 'react';
 import AppContext from '../Store';
 import {styles, isDarkMode} from '../Styles';
 import Section from '../Section';
+import Shaker from '../Shaker';
 
 const PlayScreen = ({navigation: {goBack}}) => {
   const myContext = useContext(AppContext);
@@ -22,8 +23,13 @@ const PlayScreen = ({navigation: {goBack}}) => {
         style={styles.backgroundStyle}>
         <View style={styles.backgroundStyle}>
           <Button title="Go Back" onPress={() => goBack()} />
+          <Button title="Start" />
           <Section title="UUIDs">
+            <Shaker />
             <Text>
+              {' '}
+              Device ID: {myContext.DEVICE_ID}
+              {'\n\n'}
               Service UUID: {myContext.SERVICE_UUID}
               {'\n\n'}
               Characteristic UUID: {myContext.CHARACTERISTIC_UUID}

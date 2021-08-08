@@ -36,14 +36,17 @@ const App = () => {
   const [SERVICE_UUID, setSUUID] = useState('0');
   const [CHARACTERISTIC_UUID, setCUUID] = useState('0');
   const [CONNECTED, setConnected] = useState(false);
+  const [DEVICE_ID, setDeviceID] = useState('0');
 
   const UUIDs = {
     SERVICE_UUID: SERVICE_UUID,
     CHARACTERISTIC_UUID: CHARACTERISTIC_UUID,
     CONNECTED: CONNECTED,
+    DEVICE_ID: DEVICE_ID,
     setSUUID,
     setCUUID,
     setConnected,
+    setDeviceID,
   };
 
   return (

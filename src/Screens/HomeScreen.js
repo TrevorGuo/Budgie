@@ -4,7 +4,7 @@ import AppContext from '../Store';
 import {styles, isDarkMode} from '../Styles';
 import Section from '../Section';
 
-const HomeScreen = ({navigation: {popToTop, navigate}}) => {
+const HomeScreen = ({navigation: {goBack, popToTop, navigate}}) => {
   const myContext = useContext(AppContext);
   if (!myContext.CONNECTED) {
     popToTop();

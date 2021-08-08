@@ -38,6 +38,8 @@ export const scan = context => {
                   return deviceCharacteristics;
                 })
                 .then(() => {
+                  console.log(deviceCharacteristics);
+                  context.setDeviceID(deviceCharacteristics._W[0].deviceID);
                   context.setSUUID(deviceCharacteristics._W[0].serviceUUID);
                   context.setCUUID(deviceCharacteristics._W[0].uuid);
                 })
@@ -64,14 +66,14 @@ export const scan = context => {
 };
 
 export const disconnect = context => {
-  deviceList = manager.connectedDevices([context.SERVICE_UUID]);
-  deviceList
+  manager
+    .cancelDeviceConnection(context.DEVICE_ID)
     .then(() => {
-      manager.cancelDeviceConnection(deviceList._W[0].id);
       console.log('Disconnected');
     })
     .then(() => {
       context.setConnected(false);
+      context.setDeviceID('0');
       context.setSUUID('0');
       context.setCUUID('0');
     });
