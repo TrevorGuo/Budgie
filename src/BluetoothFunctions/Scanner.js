@@ -1,6 +1,4 @@
-import {BleManager} from 'react-native-ble-plx';
-
-const manager = new BleManager();
+import {manager} from './Manager';
 
 export const scan = context => {
   const subscription = manager.onStateChange(state => {
