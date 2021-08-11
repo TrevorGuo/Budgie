@@ -1,7 +1,11 @@
 import {Appearance, StyleSheet} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-export const isDarkMode = Appearance.getColorScheme() === 'dark';
+export const Colors = {
+  background: '#2A2F41',
+  primary: '#FFFAEF',
+  green: '#5BCE47',
+  red: '#E84D4D',
+};
 
 export const styles = StyleSheet.create({
   sectionContainer: {
@@ -11,6 +15,7 @@ export const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
+    color: Colors.primary,
   },
   sectionDescription: {
     marginTop: 8,
@@ -21,10 +26,22 @@ export const styles = StyleSheet.create({
     fontWeight: '700',
   },
   backgroundStyle: {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: Colors.background,
     flex: 1,
   },
   textColor: {
-    color: isDarkMode ? Colors.white : Colors.black,
+    color: Colors.primary,
+  },
+  arrowButton: {
+    backgroundColor: Colors.background,
+    color: Colors.primary,
+  },
+  redButton: {
+    backgroundColor: Colors.red,
+    color: Colors.background,
+    borderRadius: 5,
+    overflow: 'hidden',
+    fontSize: 100,
+    position: 'absolute',
   },
 });

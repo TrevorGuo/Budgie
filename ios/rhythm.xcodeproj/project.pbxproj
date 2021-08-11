@@ -12,6 +12,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		46D619B926AA24200023AE21 /* libreact-native-ble-plx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D619B826AA24200023AE21 /* libreact-native-ble-plx.a */; };
+		46EDAC9626C4651B000EF405 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46EDAC9526C4651A000EF405 /* Ionicons.ttf */; };
 		65C25E6811FA2AAB7AA9F661 /* libPods-rhythm-rhythmTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB1B7A7B5A66CC385E9AD0B9 /* libPods-rhythm-rhythmTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		F24586F47FA0774DDB744B14 /* libPods-rhythm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D4577CB0D8565549131AC2 /* libPods-rhythm.a */; };
@@ -39,6 +40,7 @@
 		39D4577CB0D8565549131AC2 /* libPods-rhythm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rhythm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A5CD1EFC15DB0813E4BEF0C /* Pods-rhythm-rhythmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rhythm-rhythmTests.release.xcconfig"; path = "Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests.release.xcconfig"; sourceTree = "<group>"; };
 		46D619B826AA24200023AE21 /* libreact-native-ble-plx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-ble-plx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EDAC9526C4651A000EF405 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		7C5164FD319D676615795826 /* Pods-rhythm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rhythm.debug.xcconfig"; path = "Target Support Files/Pods-rhythm/Pods-rhythm.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = rhythm/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB1B7A7B5A66CC385E9AD0B9 /* libPods-rhythm-rhythmTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rhythm-rhythmTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 		13B07FAE1A68108700A75B9A /* rhythm */ = {
 			isa = PBXGroup;
 			children = (
+				46EDAC9426C464B3000EF405 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -106,6 +109,14 @@
 				DB1B7A7B5A66CC385E9AD0B9 /* libPods-rhythm-rhythmTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46EDAC9426C464B3000EF405 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				46EDAC9526C4651A000EF405 /* Ionicons.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		6D7950E0578048288A200347 /* Resources */ = {
@@ -131,7 +142,6 @@
 				F160B0E65745B59F12ECD283 /* Pods-rhythm-rhythmTests.debug.xcconfig */,
 				3A5CD1EFC15DB0813E4BEF0C /* Pods-rhythm-rhythmTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -263,6 +273,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				46EDAC9626C4651B000EF405 /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

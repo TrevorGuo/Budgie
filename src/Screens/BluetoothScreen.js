@@ -5,6 +5,7 @@ import {styles, isDarkMode} from '../Styles';
 import Section from '../Section';
 
 import {scan, disconnect} from '../BluetoothFunctions/Scanner';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const BluetoothScreen = ({navigation: {navigate}}) => {
   const myContext = useContext(AppContext);
@@ -21,14 +22,13 @@ const BluetoothScreen = ({navigation: {navigate}}) => {
         style={[styles.backgroundStyle]}>
         <View style={[styles.backgroundStyle]}>
           <Button title="Home" onPress={() => navigate('Home')} />
-          <Section title="Bluetooth">
-            <Button
-              title={myContext.CONNECTED ? 'Disconnect' : 'Scan'}
-              onPress={() =>
-                myContext.CONNECTED ? disconnect(myContext) : scan(myContext)
-              }
-            />
-          </Section>
+          <Icon
+            name="bluetooth-outline"
+            style={styles.redButton}
+            onPress={() =>
+              myContext.CONNECTED ? disconnect(myContext) : scan(myContext)
+            }
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

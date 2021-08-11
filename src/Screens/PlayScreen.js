@@ -30,8 +30,7 @@ const PlayScreen = ({navigation: {goBack}}) => {
             onPress={() => listen(myContext, times, setTimes)}
           />
           <Section title="UUIDs">
-            <Shaker />
-            <Text>
+            <Text style={styles.textColor}>
               {' '}
               Device ID: {myContext.DEVICE_ID}
               {'\n\n'}

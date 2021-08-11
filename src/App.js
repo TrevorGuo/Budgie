@@ -17,7 +17,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {useColorScheme} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from './Styles';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
