@@ -12,6 +12,8 @@ import {styles, isDarkMode} from '../Styles';
 import Section from '../Section';
 import Shaker from '../Shaker';
 import {listen} from '../BluetoothFunctions/Listener';
+import { StyleSheet, Text, View } from 'react-native';
+import { WebView } from 'react-native-webview';
 
 const PlayScreen = ({navigation: {goBack}}) => {
   const [times, setTimes] = useState([]);
@@ -38,6 +40,11 @@ const PlayScreen = ({navigation: {goBack}}) => {
               {'\n\n'}
               Characteristic UUID: {myContext.CHARACTERISTIC_UUID}
             </Text>
+          </Section>
+          <Section title='Webview'>
+          <WebView
+        originWhitelist={['*']}
+        source={{ html: '<h1>Hello world</h1>' }}/>
           </Section>
         </View>
       </ScrollView>
