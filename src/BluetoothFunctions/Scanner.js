@@ -2,6 +2,10 @@ import {manager} from './Manager';
 
 export const scan = context => {
   const subscription = manager.onStateChange(state => {
+    setTimeout(function () {
+      subscription.remove();
+      console.log('Bluetooth search timed out');
+    }, 10000);
     switch (state) {
       case 'PoweredOn':
         manager.startDeviceScan(
@@ -11,11 +15,7 @@ export const scan = context => {
             if (error) {
               console.log(error);
             }
-            if (
-              device.name === 'ESP32' ||
-              device.name === 'Shaker' ||
-              device.name === 'Trevor’s MacBook Pro'
-            ) {
+            if (device.name === 'ESP32' || device.name === 'Shaker') {
               console.log(device.id, device.name);
               manager.stopDeviceScan();
               console.log('Connected');
