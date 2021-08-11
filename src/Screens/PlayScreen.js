@@ -10,7 +10,6 @@ import React, {useState, useContext} from 'react';
 import AppContext from '../Store';
 import {styles, isDarkMode} from '../Styles';
 import Section from '../Section';
-import Shaker from '../Shaker';
 import {listen} from '../BluetoothFunctions/Listener';
 
 const PlayScreen = ({navigation: {goBack}}) => {
