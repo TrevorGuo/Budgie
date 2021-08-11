@@ -6,7 +6,7 @@ import {
   Button,
   Text,
 } from 'react-native';
-import React, {useContext} from 'react';
+import React, {useState, useContext} from 'react';
 import AppContext from '../Store';
 import {styles, isDarkMode} from '../Styles';
 import Section from '../Section';
@@ -14,6 +14,7 @@ import Shaker from '../Shaker';
 import {listen} from '../BluetoothFunctions/Listener';
 
 const PlayScreen = ({navigation: {goBack}}) => {
+  const [times, setTimes] = useState([]);
   const myContext = useContext(AppContext);
 
   return (
@@ -24,7 +25,10 @@ const PlayScreen = ({navigation: {goBack}}) => {
         style={styles.backgroundStyle}>
         <View style={styles.backgroundStyle}>
           <Button title="Go Back" onPress={() => goBack()} />
-          <Button title="Start" onPress={() => listen(myContext)} />
+          <Button
+            title="Start"
+            onPress={() => listen(myContext, times, setTimes)}
+          />
           <Section title="UUIDs">
             <Shaker />
             <Text>

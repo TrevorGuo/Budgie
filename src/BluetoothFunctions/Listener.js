@@ -1,6 +1,6 @@
 import {manager} from './Manager';
 
-export const listen = context => {
+export const listen = (context, times, setTimes) => {
   const characteristic = manager.readCharacteristicForDevice(
     context.DEVICE_ID,
     context.SERVICE_UUID,
@@ -18,6 +18,7 @@ export const listen = context => {
           console.log(error);
         } else {
           const millis = Date.now() - start;
+          setTimes([...times, millis]);
           console.log(millis);
         }
       },

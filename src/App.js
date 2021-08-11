@@ -11,6 +11,7 @@ import AppContext from './Store';
 import HomeScreen from './Screens/HomeScreen';
 import BluetoothScreen from './Screens/BluetoothScreen';
 import PlayScreen from './Screens/PlayScreen';
+import ResultsScreen from './Screens/ResultsScreen';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -67,6 +68,11 @@ const App = () => {
           <Stack.Screen
             name="Play"
             component={PlayScreen}
+            options={headerOptions}
+          />
+          <Stack.Screen
+            name="Results"
+            component={ResultsScreen}
             options={headerOptions}
           />
         </Stack.Navigator>
