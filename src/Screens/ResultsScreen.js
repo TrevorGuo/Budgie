@@ -14,13 +14,9 @@ const ResultsScreen = ({navigation: {goBack}}) => {
   return (
     <SafeAreaView style={styles.backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={styles.backgroundStyle}>
-        <View style={styles.backgroundStyle}>
-          <Button title="Go Back" onPress={() => goBack()} />
-        </View>
-      </ScrollView>
+      <View style={styles.backgroundStyle}>
+        <Button title="Go Back" onPress={() => goBack()} />
+      </View>
     </SafeAreaView>
   );
 };
