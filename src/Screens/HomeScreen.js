@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import React, {useContext, useState} from 'react';
 import AppContext from '../Store';
-import {styles, isDarkMode} from '../Styles';
+import {styles, Colors, isDarkMode} from '../Styles';
 import Section from '../Section';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -24,7 +24,10 @@ const HomeScreen = ({navigation: {goBack, popToTop, navigate}}) => {
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <View style={styles.backgroundStyle}>
         <Button title="Go Back" onPress={() => goBack()} />
-        <Button title="Play" onPress={() => navigate('Play')} />
+        <Icon
+          name="play-outline"
+          style={[styles.bigButton, {backgroundColor: Colors.green}]}
+          onPress={() => navigate('Play')}></Icon>
         <Section title="Tempo">
           <Icon
             name="caret-back-outline"

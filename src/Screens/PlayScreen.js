@@ -12,7 +12,7 @@ import {styles, Colors} from '../Styles';
 import Section from '../Section';
 import Shaker from '../Shaker';
 import {listen} from '../BluetoothFunctions/Listener';
-import SheetMusic from '../SheetMusic';
+import SheetMusic from '../SheetMusic/SheetMusic';
 
 const PlayScreen = ({navigation: {goBack}}) => {
   const [expectedTimes, setExpectedTimes] = useState([]);
