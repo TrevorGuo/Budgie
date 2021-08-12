@@ -12,10 +12,9 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		46D619B926AA24200023AE21 /* libreact-native-ble-plx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D619B826AA24200023AE21 /* libreact-native-ble-plx.a */; };
-		46EDAC9626C4651B000EF405 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46EDAC9526C4651A000EF405 /* Ionicons.ttf */; };
-		65C25E6811FA2AAB7AA9F661 /* libPods-rhythm-rhythmTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB1B7A7B5A66CC385E9AD0B9 /* libPods-rhythm-rhythmTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		F24586F47FA0774DDB744B14 /* libPods-rhythm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D4577CB0D8565549131AC2 /* libPods-rhythm.a */; };
+		B14F3A956A81527B5F6AB44E /* libPods-rhythm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B509CA2073E46D173FAA6053 /* libPods-rhythm.a */; };
+		BB3104BAFC28C2AD5CCB915D /* libPods-rhythm-rhythmTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B39C0A5ACD4E026A52C0A4 /* libPods-rhythm-rhythmTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001A4DDBFE563D99871783F6 /* Pods-rhythm-rhythmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rhythm-rhythmTests.debug.xcconfig"; path = "Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests.debug.xcconfig"; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* rhythmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rhythmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F21AD99517003FC87E /* rhythmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rhythmTests.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* rhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,16 +37,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = rhythm/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = rhythm/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = rhythm/main.m; sourceTree = "<group>"; };
-		39D4577CB0D8565549131AC2 /* libPods-rhythm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rhythm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A5CD1EFC15DB0813E4BEF0C /* Pods-rhythm-rhythmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rhythm-rhythmTests.release.xcconfig"; path = "Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests.release.xcconfig"; sourceTree = "<group>"; };
+		337D47933734842DEB0BB43C /* Pods-rhythm-rhythmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rhythm-rhythmTests.release.xcconfig"; path = "Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests.release.xcconfig"; sourceTree = "<group>"; };
+		33B39C0A5ACD4E026A52C0A4 /* libPods-rhythm-rhythmTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rhythm-rhythmTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D619B826AA24200023AE21 /* libreact-native-ble-plx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-ble-plx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		46EDAC9526C4651A000EF405 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		7C5164FD319D676615795826 /* Pods-rhythm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rhythm.debug.xcconfig"; path = "Target Support Files/Pods-rhythm/Pods-rhythm.debug.xcconfig"; sourceTree = "<group>"; };
+		6871BFDB5F68FDF55FE699B0 /* Pods-rhythm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rhythm.debug.xcconfig"; path = "Target Support Files/Pods-rhythm/Pods-rhythm.debug.xcconfig"; sourceTree = "<group>"; };
+		7EF8D5B961E9BF28A190E424 /* Pods-rhythm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rhythm.release.xcconfig"; path = "Target Support Files/Pods-rhythm/Pods-rhythm.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = rhythm/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DB1B7A7B5A66CC385E9AD0B9 /* libPods-rhythm-rhythmTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rhythm-rhythmTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC5A25D86D62DADB60A4B225 /* Pods-rhythm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rhythm.release.xcconfig"; path = "Target Support Files/Pods-rhythm/Pods-rhythm.release.xcconfig"; sourceTree = "<group>"; };
+		B509CA2073E46D173FAA6053 /* libPods-rhythm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rhythm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F160B0E65745B59F12ECD283 /* Pods-rhythm-rhythmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rhythm-rhythmTests.debug.xcconfig"; path = "Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65C25E6811FA2AAB7AA9F661 /* libPods-rhythm-rhythmTests.a in Frameworks */,
+				BB3104BAFC28C2AD5CCB915D /* libPods-rhythm-rhythmTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46D619B926AA24200023AE21 /* libreact-native-ble-plx.a in Frameworks */,
-				F24586F47FA0774DDB744B14 /* libPods-rhythm.a in Frameworks */,
+				B14F3A956A81527B5F6AB44E /* libPods-rhythm.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +103,8 @@
 			children = (
 				46D619B826AA24200023AE21 /* libreact-native-ble-plx.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				39D4577CB0D8565549131AC2 /* libPods-rhythm.a */,
-				DB1B7A7B5A66CC385E9AD0B9 /* libPods-rhythm-rhythmTests.a */,
+				B509CA2073E46D173FAA6053 /* libPods-rhythm.a */,
+				33B39C0A5ACD4E026A52C0A4 /* libPods-rhythm-rhythmTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,7 +112,7 @@
 		46EDAC9426C464B3000EF405 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				46EDAC9526C4651A000EF405 /* Ionicons.ttf */,
+				46EDAC9A26C4A832000EF405 /* Ionicons.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -137,10 +135,10 @@
 		7A022BE2C4D04B549A373A74 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7C5164FD319D676615795826 /* Pods-rhythm.debug.xcconfig */,
-				DC5A25D86D62DADB60A4B225 /* Pods-rhythm.release.xcconfig */,
-				F160B0E65745B59F12ECD283 /* Pods-rhythm-rhythmTests.debug.xcconfig */,
-				3A5CD1EFC15DB0813E4BEF0C /* Pods-rhythm-rhythmTests.release.xcconfig */,
+				6871BFDB5F68FDF55FE699B0 /* Pods-rhythm.debug.xcconfig */,
+				7EF8D5B961E9BF28A190E424 /* Pods-rhythm.release.xcconfig */,
+				001A4DDBFE563D99871783F6 /* Pods-rhythm-rhythmTests.debug.xcconfig */,
+				337D47933734842DEB0BB43C /* Pods-rhythm-rhythmTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -184,12 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "rhythmTests" */;
 			buildPhases = (
-				B95529CE945B9862E4AE4E33 /* [CP] Check Pods Manifest.lock */,
+				770FB067CC10B1A5D1861C22 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				D031A50FF41D6D4810CE4DD2 /* [CP] Embed Pods Frameworks */,
-				1BBAE1CB098949108C47DE9F /* [CP] Copy Pods Resources */,
+				EC34A412210C48FEA4AA5D6E /* [CP] Embed Pods Frameworks */,
+				E6F952B297E6E0AA9F236907 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,14 +203,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "rhythm" */;
 			buildPhases = (
-				E7180D172B545F82CB12F1B0 /* [CP] Check Pods Manifest.lock */,
+				17B3A0984D86ED08AD46CD33 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				789822EB2D9326AB4C215B3C /* [CP] Embed Pods Frameworks */,
-				59A03EB5B6B18F48F04FC66E /* [CP] Copy Pods Resources */,
+				6C8CFF74A869DBEB32ACA6FB /* [CP] Embed Pods Frameworks */,
+				9866A125DC5D5543BFA087CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,7 +271,6 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				46EDAC9626C4651B000EF405 /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,41 +291,29 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		1BBAE1CB098949108C47DE9F /* [CP] Copy Pods Resources */ = {
+		17B3A0984D86ED08AD46CD33 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rhythm-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		59A03EB5B6B18F48F04FC66E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-rhythm/Pods-rhythm-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-rhythm/Pods-rhythm-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rhythm/Pods-rhythm-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		789822EB2D9326AB4C215B3C /* [CP] Embed Pods Frameworks */ = {
+		6C8CFF74A869DBEB32ACA6FB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -345,7 +330,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rhythm/Pods-rhythm-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B95529CE945B9862E4AE4E33 /* [CP] Check Pods Manifest.lock */ = {
+		770FB067CC10B1A5D1861C22 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,7 +352,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D031A50FF41D6D4810CE4DD2 /* [CP] Embed Pods Frameworks */ = {
+		9866A125DC5D5543BFA087CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rhythm/Pods-rhythm-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rhythm/Pods-rhythm-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rhythm/Pods-rhythm-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6F952B297E6E0AA9F236907 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC34A412210C48FEA4AA5D6E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -382,28 +401,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E7180D172B545F82CB12F1B0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-rhythm-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -458,7 +455,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F160B0E65745B59F12ECD283 /* Pods-rhythm-rhythmTests.debug.xcconfig */;
+			baseConfigurationReference = 001A4DDBFE563D99871783F6 /* Pods-rhythm-rhythmTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -485,7 +482,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A5CD1EFC15DB0813E4BEF0C /* Pods-rhythm-rhythmTests.release.xcconfig */;
+			baseConfigurationReference = 337D47933734842DEB0BB43C /* Pods-rhythm-rhythmTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -509,7 +506,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C5164FD319D676615795826 /* Pods-rhythm.debug.xcconfig */;
+			baseConfigurationReference = 6871BFDB5F68FDF55FE699B0 /* Pods-rhythm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -536,7 +533,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC5A25D86D62DADB60A4B225 /* Pods-rhythm.release.xcconfig */;
+			baseConfigurationReference = 7EF8D5B961E9BF28A190E424 /* Pods-rhythm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

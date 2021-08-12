@@ -17,20 +17,16 @@ const BluetoothScreen = ({navigation: {navigate}}) => {
   return (
     <SafeAreaView style={[styles.backgroundStyle]}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={[styles.backgroundStyle]}>
-        <View style={[styles.backgroundStyle]}>
-          <Button title="Home" onPress={() => navigate('Home')} />
-          <Icon
-            name="bluetooth-outline"
-            style={styles.redButton}
-            onPress={() =>
-              myContext.CONNECTED ? disconnect(myContext) : scan(myContext)
-            }
-          />
-        </View>
-      </ScrollView>
+      <View style={[styles.backgroundStyle]}>
+        <Button title="Home" onPress={() => navigate('Home')} />
+        <Icon
+          name="bluetooth-outline"
+          style={styles.redButton}
+          onPress={() =>
+            myContext.CONNECTED ? disconnect(myContext) : scan(myContext)
+          }
+        />
+      </View>
     </SafeAreaView>
   );
 };
