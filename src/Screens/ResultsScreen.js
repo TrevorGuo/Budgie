@@ -22,16 +22,16 @@ const ResultsScreen = ({route, navigation: {goBack}}) => {
       <View style={styles.backgroundStyle}>
         <Button title="Go Back" onPress={() => goBack()} />
         <Section title="Expected">
-          {expected.map(time => (
-            <Text style={styles.textColor}>
+          {expected.map((time, index) => (
+            <Text style={styles.textColor} key={index}>
               {time}
               {'ms '}
             </Text>
           ))}
         </Section>
         <Section title="Played">
-          {times.map(time => (
-            <Text style={styles.textColor}>
+          {times.map((time, index) => (
+            <Text style={styles.textColor} key={index}>
               {time}
               {'ms '}
             </Text>
