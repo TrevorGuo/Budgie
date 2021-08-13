@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		466163AA26C6195D00F32F2C /* metronome.wav in Resources */ = {isa = PBXBuildFile; fileRef = 466163A926C6195D00F32F2C /* metronome.wav */; };
 		46D619B926AA24200023AE21 /* libreact-native-ble-plx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D619B826AA24200023AE21 /* libreact-native-ble-plx.a */; };
 		50A4BF93D5D7CB461E17C795 /* libPods-rhythm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4199B06D12AEF3528AFE0101 /* libPods-rhythm.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -40,6 +41,7 @@
 		260485E38A2C0227AE6E0B38 /* Pods-rhythm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rhythm.release.xcconfig"; path = "Target Support Files/Pods-rhythm/Pods-rhythm.release.xcconfig"; sourceTree = "<group>"; };
 		2E59A0F1C6EFF8BE7FDF920A /* Pods-rhythm-rhythmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rhythm-rhythmTests.release.xcconfig"; path = "Target Support Files/Pods-rhythm-rhythmTests/Pods-rhythm-rhythmTests.release.xcconfig"; sourceTree = "<group>"; };
 		4199B06D12AEF3528AFE0101 /* libPods-rhythm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rhythm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		466163A926C6195D00F32F2C /* metronome.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = metronome.wav; path = ../src/Metronome/metronome.wav; sourceTree = "<group>"; };
 		46D619B826AA24200023AE21 /* libreact-native-ble-plx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-ble-plx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = rhythm/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95326DEBA0B01CC496DFEBE6 /* libPods-rhythm-rhythmTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rhythm-rhythmTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 		6D7950E0578048288A200347 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				466163A926C6195D00F32F2C /* metronome.wav */,
 				75E50360701A659B00AFD881 /* Pods */,
 			);
 			name = Resources;
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				466163AA26C6195D00F32F2C /* metronome.wav in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +457,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = rhythmTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -477,6 +482,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = rhythmTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -504,6 +510,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PGQ9BX6P8Z;
 				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = rhythm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -530,6 +537,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PGQ9BX6P8Z;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = rhythm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

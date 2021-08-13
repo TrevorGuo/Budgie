@@ -4,8 +4,10 @@ import AppContext from '../Store';
 import {styles, isDarkMode} from '../Styles';
 import Section from '../Section';
 import {listen} from '../BluetoothFunctions/Listener';
+import {playMetronome} from '../Metronome/metronome';
 
-const PlayScreen = ({navigation: {goBack}}) => {
+const PlayScreen = ({route, navigation: {goBack}}) => {
+  const {tempo} = route.params;
   const [times, setTimes] = useState([]);
   const myContext = useContext(AppContext);
 
@@ -16,7 +18,11 @@ const PlayScreen = ({navigation: {goBack}}) => {
         <Button title="Go Back" onPress={() => goBack()} />
         <Button
           title="Start"
-          onPress={() => listen(myContext, times, setTimes)}
+          onPress={() => {
+            playMetronome(tempo).then(() => {
+              listen(myContext, times, setTimes);
+            });
+          }}
         />
         <Section title="UUIDs">
           <Text style={styles.textColor}>

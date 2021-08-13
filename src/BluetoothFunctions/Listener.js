@@ -19,7 +19,6 @@ export const listen = (context, times, setTimes) => {
         } else {
           const millis = Date.now() - start;
           setTimes([...times, millis]);
-          console.log(millis);
         }
       },
     );

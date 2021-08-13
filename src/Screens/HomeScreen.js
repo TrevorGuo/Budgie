@@ -24,7 +24,7 @@ const HomeScreen = ({navigation: {goBack, popToTop, navigate}}) => {
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <View style={styles.backgroundStyle}>
         <Button title="Go Back" onPress={() => goBack()} />
-        <Button title="Play" onPress={() => navigate('Play')} />
+        <Button title="Play" onPress={() => navigate('Play', {tempo})} />
         <Section title="Tempo">
           <Icon
             name="caret-back-outline"

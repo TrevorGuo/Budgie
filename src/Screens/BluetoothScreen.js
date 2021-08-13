@@ -22,9 +22,7 @@ const BluetoothScreen = ({navigation: {navigate}}) => {
         <Icon
           name="bluetooth-outline"
           style={styles.redButton}
-          onPress={() =>
-            myContext.CONNECTED ? disconnect(myContext) : scan(myContext)
-          }
+          onPress={() => scan(myContext)}
         />
       </View>
     </SafeAreaView>

@@ -1,3 +1,5 @@
 rootProject.name = 'rhythm'
+include ':react-native-metronome'
+project(':react-native-metronome').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-metronome/android')
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':app'
