@@ -11,6 +11,10 @@ export const listen = (context, tempo, times, setTimes) => {
   console.log('Starting...');
   console.log(5 * interval);
   return new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      setTimes(times);
+      resolve();
+    }, 5 * interval);
     characteristic.then(() => {
       manager.monitorCharacteristicForDevice(
         context.DEVICE_ID,
@@ -22,7 +26,9 @@ export const listen = (context, tempo, times, setTimes) => {
             reject();
           } else {
             const millis = Date.now() - start;
-            setTimes([...times, millis]);
+            times.push(millis);
+            //setTimes([...times, millis]);
+            console.log(millis);
           }
         },
       );
