@@ -28,7 +28,9 @@ const PlayScreen = ({route, navigation: {goBack, navigate}}) => {
                 listen(myContext, tempo, times, setTimes);
               })
               .then(() => {
-                navigate('Results', {tempo, times});
+                setTimeout(() => {
+                  navigate('Results', {tempo, times: times});
+                }, ((5 * 60) / tempo) * 1000);
               })
               .catch(error => console.log(error));
           }}

@@ -9,10 +9,8 @@ export const listen = (context, tempo, times, setTimes) => {
   const interval = (60 / tempo) * 1000;
   const start = Date.now();
   console.log('Starting...');
+  console.log(5 * interval);
   return new Promise(function (resolve, reject) {
-    setTimeout(() => {
-      resolve();
-    }, 5 * interval);
     characteristic.then(() => {
       manager.monitorCharacteristicForDevice(
         context.DEVICE_ID,
