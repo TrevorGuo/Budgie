@@ -11,6 +11,7 @@ export const listen = (context, tempo, times, setTimes) => {
   console.log('Starting...');
   return new Promise(function (resolve, reject) {
     setTimeout(() => {
+      setTimes(times);
       resolve();
     }, 5 * interval);
     characteristic.then(() => {
@@ -24,7 +25,9 @@ export const listen = (context, tempo, times, setTimes) => {
             reject();
           } else {
             const millis = Date.now() - start;
-            setTimes([...times, millis]);
+            times.push(millis);
+            //setTimes([...times, millis]);
+            console.log(millis);
           }
         },
       );
