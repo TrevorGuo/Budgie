@@ -6,7 +6,7 @@ import Section from '../Section';
 import {listen} from '../BluetoothFunctions/Listener';
 import {playMetronome} from '../Metronome/metronome';
 
-const PlayScreen = ({route, navigation: {goBack}}) => {
+const PlayScreen = ({route, navigation: {goBack, navigate}}) => {
   const {tempo} = route.params;
   const [times, setTimes] = useState([]);
   const myContext = useContext(AppContext);
@@ -17,11 +17,20 @@ const PlayScreen = ({route, navigation: {goBack}}) => {
       <View style={styles.backgroundStyle}>
         <Button title="Go Back" onPress={() => goBack()} />
         <Button
+          title="Results"
+          onPress={() => navigate('Results', {tempo, times: [0, 1, 2]})}
+        />
+        <Button
           title="Start"
           onPress={() => {
-            playMetronome(tempo).then(() => {
-              listen(myContext, times, setTimes);
-            });
+            playMetronome(tempo)
+              .then(() => {
+                listen(myContext, tempo, times, setTimes);
+              })
+              .then(() => {
+                navigate('Results', {tempo, times});
+              })
+              .catch(error => console.log(error));
           }}
         />
         <Section title="UUIDs">
