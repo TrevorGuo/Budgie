@@ -5,6 +5,7 @@ import Section from '../Section';
 
 const ResultsScreen = ({route, navigation: {goBack}}) => {
   const {tempo, times} = route.params;
+  console.log(times);
   const interval = (60 / tempo) * 1000;
   const expected = [
     interval,
@@ -29,12 +30,12 @@ const ResultsScreen = ({route, navigation: {goBack}}) => {
           ))}
         </Section>
         <Section title="Played">
-          {times.map(time => {
+          {times.map(time => (
             <Text style={styles.textColor}>
               {time}
               {'ms '}
-            </Text>;
-          })}
+            </Text>
+          ))}
         </Section>
       </View>
     </SafeAreaView>
