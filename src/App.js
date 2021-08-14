@@ -30,6 +30,7 @@ const App = () => {
     headerStyle: backgroundStyle,
     headerTintColor: isDarkMode ? Colors.white : Colors.black,
     headerShown: false,
+    gestureEnabled: false,
   };
 
   const Stack = createStackNavigator();
@@ -58,7 +59,6 @@ const App = () => {
             name="Bluetooth"
             component={BluetoothScreen}
             options={headerOptions}
-            // options={{...headerOptions, headerLeft: null, gestureEnabled: false}}
           />
           <Stack.Screen
             name="Home"

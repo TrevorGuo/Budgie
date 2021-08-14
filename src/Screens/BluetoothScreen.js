@@ -25,7 +25,6 @@ const BluetoothScreen = ({navigation: {navigate}}) => {
         source={require('../assets/ShakerBird1.png')}
       />
       <View style={styles.buttonContainer}>
-        <Button title="Home" onPress={() => navigate('Home')} />
         <Icon
           name="bluetooth-outline"
           style={[styles.bigButton, {backgroundColor: Colors.red}]}
