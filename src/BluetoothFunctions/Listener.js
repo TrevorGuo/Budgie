@@ -7,12 +7,13 @@ export const listen = (context, tempo, times, setTimes) => {
     context.CHARACTERISTIC_UUID,
   );
   const start = Date.now();
-  console.log('Starting...');
+  //console.log('Starting...');
   return new Promise(function (resolve, reject) {
     setTimeout(() => {
       setTimes(times);
       resolve();
     }, (60 / tempo) * 1000);
+    console.log("start");
     characteristic
       .then(() => {
         manager.monitorCharacteristicForDevice(

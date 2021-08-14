@@ -16,7 +16,8 @@ const ResultsScreen = ({route, navigation: {pop}}) => {
     4.5 * interval,
     4.75 * interval,
   ];
-
+console.log(expected);
+console.log(times);
   function iterateThru(actual, expected) {
     const discrepency = actual.length - expected.length;
     const ALLOWANCE = 100;
