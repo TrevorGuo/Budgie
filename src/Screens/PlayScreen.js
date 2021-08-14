@@ -1,51 +1,50 @@
-import {SafeAreaView, StatusBar, View, Button, Text} from 'react-native';
-import React, {useState, useContext} from 'react';
+import {SafeAreaView, StatusBar, View, Button, Image, Text} from 'react-native';
+import React, {useState, useEffect, useContext} from 'react';
 import AppContext from '../Store';
-import {styles, isDarkMode} from '../Styles';
-import Section from '../Section';
+import {styles, Colors, isDarkMode} from '../Styles';
 import {listen} from '../BluetoothFunctions/Listener';
 import {playMetronome} from '../Metronome/metronome';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const PlayScreen = ({route, navigation: {goBack, navigate}}) => {
   const {tempo} = route.params;
   const [times, setTimes] = useState([]);
+  const [showStart, setShowStart] = useState(true);
   const myContext = useContext(AppContext);
+
+  function onStartButton() {
+    setShowStart(false);
+    playMetronome(tempo)
+      .then(() => {
+        listen(myContext, times, setTimes);
+      })
+      .then(() => {
+        setTimeout(() => {
+          setShowStart(true);
+          navigate('Results', {tempo, times: times});
+        }, ((5 * 60) / tempo) * 1000);
+      })
+      .catch(error => console.log(error));
+  }
 
   return (
     <SafeAreaView style={styles.backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View style={styles.backgroundStyle}>
-        <Button title="Go Back" onPress={() => goBack()} />
-        <Button
-          title="Results"
-          onPress={() => navigate('Results', {tempo, times: [0, 1, 2]})}
+      <View>
+        <Image
+          style={styles.sheetMusic}
+          source={require('../assets/DemoRhythm.png')}
         />
-        <Button
-          title="Start"
-          onPress={() => {
-            playMetronome(tempo)
-              .then(() => {
-                listen(myContext, tempo, times, setTimes);
-              })
-              .then(() => {
-                setTimeout(() => {
-                  navigate('Results', {tempo, times: times});
-                }, ((5 * 60) / tempo) * 1000);
-              })
-              .catch(error => console.log(error));
-          }}
-        />
-        <Section title="UUIDs">
-          <Text style={styles.textColor}>
-            {' '}
-            Device ID: {myContext.DEVICE_ID}
-            {'\n\n'}
-            Service UUID: {myContext.SERVICE_UUID}
-            {'\n\n'}
-            Characteristic UUID: {myContext.CHARACTERISTIC_UUID}
-          </Text>
-        </Section>
       </View>
+      {showStart && (
+        <View style={styles.buttonContainer}>
+          <Icon
+            name="play-outline"
+            style={[styles.bigButton, {backgroundColor: Colors.green}]}
+            onPress={() => navigate('Results', {tempo, times: [0, 1, 2]})}
+          />
+        </View>
+      )}
     </SafeAreaView>
   );
 };

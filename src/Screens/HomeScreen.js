@@ -5,11 +5,10 @@ import {
   View,
   Button,
   Text,
-  TextInput,
 } from 'react-native';
 import React, {useContext, useState} from 'react';
 import AppContext from '../Store';
-import {styles, isDarkMode} from '../Styles';
+import {styles, Colors, isDarkMode} from '../Styles';
 import Section from '../Section';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -20,22 +19,27 @@ const HomeScreen = ({navigation: {goBack, popToTop, navigate}}) => {
   // }
   const [tempo, setTempo] = useState(80);
   return (
-    <SafeAreaView style={styles.backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View style={styles.backgroundStyle}>
-        <Button title="Go Back" onPress={() => goBack()} />
-        <Button title="Play" onPress={() => navigate('Play', {tempo})} />
-        <Section title="Tempo">
+    <SafeAreaView style={[styles.backgroundStyle]}>
+      <View style={styles.homeView}>
+        <Text style={styles.titleText}>Tempo</Text>
+        <View style={styles.tempoFlexbox}>
           <Icon
-            name="caret-back-outline"
-            style={styles.arrowButton}
-            onPress={() => setTempo(tempo - 1)}></Icon>
-          <Text style={styles.textColor}>{tempo}</Text>
-          <Icon
-            name="caret-forward-outline"
+            name="caret-up-outline"
             style={styles.arrowButton}
             onPress={() => setTempo(tempo + 1)}></Icon>
-        </Section>
+          <Text style={styles.tempoText}>{tempo}</Text>
+          <Icon
+            name="caret-down-outline"
+            style={styles.arrowButton}
+            onPress={() => setTempo(tempo - 1)}></Icon>
+        </View>
+      </View>
+      <View style={styles.buttonContainer}>
+        <Icon
+          name="checkmark-outline"
+          style={[styles.bigButton, {backgroundColor: Colors.green}]}
+          onPress={() => navigate('Play', {tempo})}
+        />
       </View>
     </SafeAreaView>
   );
