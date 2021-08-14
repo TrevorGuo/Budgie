@@ -6,7 +6,7 @@ import {listen} from '../BluetoothFunctions/Listener';
 import {playMetronome} from '../Metronome/metronome';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const PlayScreen = ({route, navigation: {goBack, navigate}}) => {
+const PlayScreen = ({route, navigation: {navigate}}) => {
   const {tempo} = route.params;
   const [times, setTimes] = useState([]);
   const [showStart, setShowStart] = useState(true);
@@ -17,7 +17,7 @@ const PlayScreen = ({route, navigation: {goBack, navigate}}) => {
     setShowStart(false);
     playMetronome(tempo)
       .then(() => {
-        listen(myContext, times, setTimes);
+        listen(myContext, tempo, times, setTimes);
       })
       .then(() => {
         setTimeout(() => {
