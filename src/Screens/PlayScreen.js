@@ -13,6 +13,7 @@ const PlayScreen = ({route, navigation: {goBack, navigate}}) => {
   const myContext = useContext(AppContext);
 
   function onStartButton() {
+    setTimes([]);
     setShowStart(false);
     playMetronome(tempo)
       .then(() => {
@@ -41,7 +42,7 @@ const PlayScreen = ({route, navigation: {goBack, navigate}}) => {
           <Icon
             name="play-outline"
             style={[styles.bigButton, {backgroundColor: Colors.green}]}
-            onPress={() => navigate('Results', {tempo, times: [0, 1, 2]})}
+            onPress={onStartButton}
           />
         </View>
       )}

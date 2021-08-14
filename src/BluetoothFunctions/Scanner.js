@@ -3,7 +3,7 @@ import {manager} from './Manager';
 export const scan = context => {
   const subscription = manager.onStateChange(state => {
     setTimeout(function () {
-      if (!myContext.CONNECTED) {
+      if (!context.CONNECTED) {
         subscription.remove();
         console.log('Bluetooth search timed out');
       }

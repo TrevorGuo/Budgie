@@ -96,7 +96,14 @@ export const styles = StyleSheet.create({
     height: (windowHeight * 3) / 5,
     width: (windowWidth * 2) / 3,
     left: windowWidth / 4,
-    // bottom: windowWidth / 12,
+  },
+  bird2: {
+    position: 'absolute',
+    resizeMode: 'contain',
+    height: windowWidth / 6,
+    width: windowWidth / 6,
+    right: windowWidth / 9,
+    bottom: windowWidth / 9,
   },
   sheetMusic: {
     resizeMode: 'contain',

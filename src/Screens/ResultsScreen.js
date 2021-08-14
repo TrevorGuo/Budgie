@@ -65,6 +65,10 @@ const ResultsScreen = ({route, navigation: {pop}}) => {
           style={[styles.bigButton, {backgroundColor: Colors.green}]}
           onPress={() => pop(2)}
         />
+        <Image
+          style={styles.bird2}
+          source={require('../assets/ShakerBird2.png')}
+        />
       </View>
     </SafeAreaView>
   );
