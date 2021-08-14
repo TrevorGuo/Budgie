@@ -35,7 +35,7 @@ const ResultsScreen = ({route, navigation: {pop}}) => {
     });
     if (isActual)
       for (let i = 0; i < Math.abs(discrepency); i++) {
-        output.push('Extra');
+        output[output.length - 1 - i] = 'Extra';
       }
     else
       for (let i = 0; i < Math.abs(discrepency); i++) {
